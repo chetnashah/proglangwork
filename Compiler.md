@@ -7,6 +7,17 @@ Source to source translation (or preprocessors) can also be considered a compile
 do simplistic replace and don't attempt to semantically understand the source language like compilers.
 Many compilers generate assembly instead of machine language
 
+A compiler from `X` to `Y` is a program (or a machine, or just some kind of mechanism in general) that translates any program `p` from some language `X` into a `semantically equivalent program p′` in some language `Y` in such a way that **the semantics of the program are preserved**, i.e. `that interpreting p′ with an interpreter for Y will yield the same results and have the same effects as interpreting p with an interpreter for X`. (Note that X and Y may be the same language.)
+
+A compiler that compiles to bytecode may be called bytecode compiler.
+Example `javac`, `hermesc`: Standalone Hermes compiler. This can compile JavaScript to Hermes bytecode, but does not support executing it.
+
+Typically a compiler will convert from source language ASTs to destination language ASTs or flattened instruction sets (with semantics preserved)
+
+### Compiler frontend
+
+Tokenization, parsing and AST creation.
+
 ### Tombstone diagram (T-diagram)
 
 https://en.wikipedia.org/wiki/Tombstone_diagram
